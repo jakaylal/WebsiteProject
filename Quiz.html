@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Quiz</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <style>
+  .custom-bg {
+      background-color: rgb(255, 184, 184);
+      color: #000;
+
+  a:hover {
+  background-color: yellow;
+  font-size: 18px;
+}
+  }
+  @media (max-width: 576px) {
+            .custom-box {
+                font-size: 14px;
+                background-color: lightblue;
+            }
+        }
+@media (min-width: 600px) {
+            .custom-box {
+                font-size: 18px;
+            }
+        }
+</style>
+</head>
+
+<body class="custom-bg">
+  <div class="custom-box">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="Home.html">Home</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Majors.html">Majors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Colleges.html">Colleges</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+  </div>
+<!--mockup & frame for quiz page-->
+  <div class="row">
+    <div class="col-sm-8">
+      <h5>
+        The following quiz serves as a guide to help assess what a few possible majors should be, based on a certain criteria. 
+        As always, please only use this as a guide, and not a determining factor.
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <!--QUIZ FORM-->
+    <div class="col-sm">
+<form>
+    <p>1: What is a hobby that aligns with your interest the most?</p>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">Reading</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Watching Movies & Television</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Drawing</label>
+<br>
+<p>2: What is are your favorite subjects?</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">English & History</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Math & Art</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Science & Technology</label>
+<p>3: Out of the choices, which are you the best at?</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">Writing Essays</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Solving a Mathematical Problem</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Constructing a Model/Diagram</label>
+<p>4: Are you aligned with the left side of your brain, or the right side?</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">Right</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Left</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Both</label>
+<p>5: Pick a genre</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">Fiction</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Nonfiction</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Science Fiction</label>
+<p>6: What is your learning type?</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">Auditory</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Visual</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Kinesthetic</label>
+<p>7: Pick a of manga</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">shoujo/josei/seinen</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">shonen/isekai</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">slice of life/psycological</label>
+<p>8: What major(s) would you enjoy the most?</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">English/Communication/Art History/History/Psychology</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">Math/Computer Science/Chemistry/Accounting/Health Care</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">Engineering/Art/Interior Design/Marketing</label>
+<button onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Successfully Submitted!";
+}
+</script>
+<p style="text-align:center">
+  If you selected mostly As, you are more inclined to major in English, Communications, and the arts.
+</p>
+<p style="text-align:center">
+  If you selected mostly Bs, you are more inclined to major in the Sciences.
+</p>
+<p style="text-align:center">
+  If you selected mostly Cs, you are more inclined to major in Engineering and Marketing.
+</p>
+</form> 
+<p><i>
+  For more information about specific <a href="Majors.html">majors</a>and <a href="Colleges.html">colleges</a>, please visit these links!
+</p></i>
+</div>
+    </div>
+    <div class="col-sm">
+      <img src="https://images.ctfassets.net/kj4bmrik9d6o/bsvSi6aIAWk0YUD9V30kC/9d7df0d9107f04b4ce404ec30378b92a/How_to_Choose_the_Right_Major_in_5_Easy_Steps__2_.png" alt="major img" width="700" height="700">
+    </div>
+  </div>
+</div>
+  
+
+
+
+
+</body>
